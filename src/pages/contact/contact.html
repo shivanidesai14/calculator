@@ -1,17 +1,45 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Calc
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" [(ngModel)]="num" style="height:100px;width:230px;font-size:25px;"></td>
+        </tr>
+        <tr>
+
+            <td colspan="2"><button ion-button color="dark" medium (click)="pressc()" style="width:105px;height:50px;font-size:20px">C</button></td>
+            <td><button ion-button color="dark" medium (click)="pressbackspace()" style="width:50px;height:50px;font-size:20px"><ion-icon name="backspace"></ion-icon></button></td>
+            <td><button ion-button color="dark" medium (click)="pressdiv()" style="width:50px;height:50px;font-size:20px">/</button></td>
+        </tr>
+        <tr>
+            <td><button ion-button color="dark" medium (click)="press7()" style="width:50px;height:50px;font-size:20px">7</button></td>
+            <td><button ion-button color="dark" medium (click)="press8()" style="width:50px;height:50px;font-size:20px">8</button></td>
+            <td><button ion-button color="dark" medium (click)="press9()" style="width:50px;height:50px;font-size:20px">9</button></td>
+            <td><button ion-button color="dark" medium (click)="pressmul()" style="width:50px;height:50px;font-size:20px">*</button></td>
+        </tr>
+        <tr>
+            <td><button ion-button color="dark" medium (click)="press4()" style="width:50px;height:50px;font-size:20px">4</button></td>
+            <td><button ion-button color="dark" medium (click)="press5()" style="width:50px;height:50px;font-size:20px">5</button></td>
+            <td><button ion-button color="dark" medium (click)="press6()" style="width:50px;height:50px;font-size:20px">6</button></td>
+            <td><button ion-button color="dark" medium (click)="pressmin()" style="width:50px;height:50px;font-size:20px">-</button></td>
+        </tr>
+        <tr>
+            <td><button ion-button color="dark" medium (click)="press3()" style="width:50px;height:50px;font-size:20px">3</button></td>
+            <td><button ion-button color="dark" medium (click)="press2()" style="width:50px;height:50px;font-size:20px">2</button></td>
+            <td><button ion-button color="dark" medium (click)="press1()" style="width:50px;height:50px;font-size:20px">1</button></td>
+            <td><button ion-button color="dark" medium (click)="pressplus()" style="width:50px;height:50px;font-size:20px">+</button></td>
+        </tr>
+        <tr>
+            <td><button ion-button color="dark" medium (click)="press0()" style="width:50px;height:50px;font-size:20px">0</button></td>
+            <td><button ion-button color="dark" medium (click)="pressdot()" style="width:50px;height:50px;font-size:20px">.</button></td>
+            <td><button ion-button color="dark" medium (click)="presseq()" style="width:50px;height:50px;font-size:20px">=</button></td>
+            <td><button ion-button color="dark" medium (click)="pressperc()" style="width:50px;height:50px;font-size:20px">%</button></td>
+        </tr>
+    </table>
 </ion-content>

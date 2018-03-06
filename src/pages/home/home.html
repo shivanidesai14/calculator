@@ -1,17 +1,47 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>User Id</ion-label>
+            <ion-input type="text" [(ngModel)]="Id"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>User Name</ion-label>
+            <ion-input type="text" [(ngModel)]="Name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>User Bdate</ion-label>
+            <ion-input type="text" [(ngModel)]="Bdate"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>User Gender</ion-label>
+            <ion-input type="text" [(ngModel)]="Gender"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label floating>User Address</ion-label>
+            <ion-input type="text" [(ngModel)]="Address"></ion-input>
+        </ion-item>
+
+        <button ion-button block color="dark" (click)="userinsert()">Sign Up</button>
+
+        <ion-item *ngFor="let item of arr">
+            <a (click)="onselect(item)">
+                <ion-item>UserId :-- {{item.Id}}</ion-item>
+            </a>
+            <button ion-button color="primary" (click)="onDelete(item)">Delete</button>
+        </ion-item>
+
+    </ion-list>
 </ion-content>

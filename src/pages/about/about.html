@@ -1,11 +1,47 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>emp Id</ion-label>
+            <ion-input type="text" [(ngModel)]="id"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>emp Name</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Designation</ion-label>
+            <ion-input type="text" [(ngModel)]="desi"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Salary</ion-label>
+            <ion-input type="text" [(ngModel)]="salary"></ion-input>
+        </ion-item>
+
+
+
+        <button ion-button block color="dark" (click)="addTask()">Sign Up</button>
+
+        <ion-item *ngFor="let item of arr">
+            <a (click)="onselect(item)">
+                <ion-item>UserName :-- {{item.name}}</ion-item>
+                <ion-item>UserId :-- {{item.id}}</ion-item>
+            </a>
+            <button ion-button color="primary" (click)="onDelete(item)">Delete</button>
+        </ion-item>
+
+    </ion-list>
+
 
 </ion-content>
